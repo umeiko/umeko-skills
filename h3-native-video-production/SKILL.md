@@ -11,6 +11,7 @@ description: Produce and repair H3 native audiovisual storyboards and clips in C
 
 - 上4步、从8步切换、排查模型兼容：读 [4步快速部署](references/turbo4-deployment.md)。附 CPU 工作流转换工具，不启动显卡。
 - 设计分镜、提示词被念出、说错人、音色年龄错误：读 [对白与分镜契约](references/prompt-and-storyboard.md)。
+- 原片自行生成台词字幕、黑字幕条或衣服/盒底文字：读 [原生字幕污染及去除](references/subtitle-contamination.md)，含实际失败、成功重生成配方和验收边界。
 - 查看历次用户拒收以及最终修法：读 [奶龙短剧案例](references/grandpa-failure-cases.md)；涉及产品、热像、真人手或舞蹈参考时，再读 [其他短片案例](references/product-and-motion-cases.md)。
 - 裁切救片、复用原音、字幕、剪辑与终审：读 [验收及后期](references/review-and-editing.md)。
 
