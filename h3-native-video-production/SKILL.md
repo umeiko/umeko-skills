@@ -7,6 +7,8 @@ description: Produce and repair H3 native audiovisual storyboards and clips in C
 
 以用户当前剧本、角色参考和最新逐镜意见为准。把“首帧通过”“技术出片”“画面通过”“原生声音通过”“正式交付”分开记录。保留拒收版本与旧正式片；改镜头不覆盖历史请求和已交付母版。
 
+**该用户的成品交付偏好：**完成离线技术检查后，直接复制到既定输出/桌面文件夹，核SHA一致并给文件路径，由用户自行播放。不要自动打开播放器、浏览器预览页或播放成片；不要以完整浏览器播放作为常规交付前置条件。只有用户明确要求播放时才执行。此最新偏好覆盖案例中较早的自动完整播放流程。
+
 ## 按任务读取
 
 - 上4步、从8步切换、排查模型兼容：读 [4步快速部署](references/turbo4-deployment.md)。附 CPU 工作流转换工具，不启动显卡。
@@ -14,6 +16,7 @@ description: Produce and repair H3 native audiovisual storyboards and clips in C
 - 原片自行生成台词字幕、黑字幕条或衣服/盒底文字：读 [原生字幕污染及去除](references/subtitle-contamination.md)，含实际失败、成功重生成配方和验收边界。
 - 查看历次用户拒收以及最终修法：读 [奶龙短剧案例](references/grandpa-failure-cases.md)；涉及产品、热像、真人手或舞蹈参考时，再读 [其他短片案例](references/product-and-motion-cases.md)。
 - 裁切救片、复用原音、字幕、剪辑与终审：读 [验收及后期](references/review-and-editing.md)。
+- 淡黑转场、“一天后”插卡、指定ED变速、发布底纹或取用本例素材：读 [转场、片尾与发布素材](references/transitions-and-ending-assets.md)。视频素材通过该文链接的 GitHub Release 获取。
 
 ## 执行原则
 
