@@ -10,10 +10,12 @@
 
 ## H3 文字结构
 
-下面是这组项目已校验并使用的结构；当前目标环境仍要核模型版本。官方语法参考入口：[MiniMax-H3 skills](https://github.com/MiniMax-AI/MiniMax-H3/tree/main/skills)。
+下面是这组项目已校验并使用的结构；当前目标环境仍要核模型版本。官方语法参考：[MiniMax 基础模式指南](https://github.com/MiniMax-AI/MiniMax-H3/blob/main/skills/h3-prompt-writing/references/base-en.txt)及[ComfyUI H3 指南](https://github.com/Comfy-Org/docs/blob/main/tutorials/video/minimax/minimax-h3-prompt-guide.mdx)。
 
 ```text
-integrated_multimodal_description: [Shot 1] A steady warm close-up matching Picture1. The ivory-shirt child looks toward the small glass case. Only the child articulates words; his grandfather is seen from behind, quietly listening inside the case. Keep the image clean, without subtitles or lettering. The child with a bright youthful voice and clear conversational Mandarin (S1) says: <d>[Chinese] 爷爷！真的是你吗！</d>
+For the target video, at 0.00 seconds into the target video, <Picture 1> (from [Shot 1]) is fully referenced.
+
+integrated_multimodal_description: [Shot 1] A steady warm close-up matching Picture1. The ivory-shirt child looks toward the small glass case. Only the child articulates words; his grandfather is seen from behind, quietly listening inside the case. Clothing, glass and the plain base retain their reference appearance. The child with a bright youthful voice and clear conversational Mandarin (S1) says: <d>[Chinese] 爷爷！真的是你吗！</d>
 overall_soundscape: Faint indoor room tone and gentle clothing rustle.
 non_diegetic_music: N/A.
 ```
@@ -23,7 +25,10 @@ non_diegetic_music: N/A.
 - 台词放镜头正文，不放 `overall_soundscape`。环境声字段不写说话人、台词、重复转述或“口号后本镜…”说明。
 - 本项目英文描述/原语言台词分开，避免中文舞台句串读。语言标签按目标版本的指南固定，别在同批混用写法。
 - 无对白镜头不放 `<d>`；写清可见人物静听/嘴闭和普通环境声。无需把“不要说话”重复十次。
-- 后期统一加字幕的镜头只加一句短的 clean-picture 约束，不堆列各种不想出现的图文对象。
+- 只给首帧时采用上例 I2VA 对齐行；不要因为底模文件名含 FL2VA 就虚构 Picture 2。首尾帧模式另用官方双图对齐行。
+- 画面、动作与声音描述写英文；台词只在 d 块中保留原语言。双引号用于用户真正要显示的画内文字，别把对白再写成带引号的画面说明。环境声字段仅放环境/非语言声，音乐字段只放配乐。
+- 后期统一加字幕时，优先短正向画面描述和清洁首帧，不列长串禁用概念。BasicGuider 的正条件里写禁用词仍会引入这些概念。
+- 官方指南建议上述结构，但未给出“英文可降低字幕多少”的受控数据。本项目同为英文的 G08/G10 仍曾生成字幕，G09/G13 的新正向描述才实际干净；不能把英文或官方模板当作无字幕保证。仍要查看完整生成画面，发现烙入字样则拒收或用已真实验收的正常选片处理。
 
 本案例编号：S1主角孩子，S2主角爷爷，S3父亲，S4奶奶，S5芥末黄衣邻居，S6设备系统，S7天蓝衣小胖。阿布是另一位末段登场的孩子，不因穿绿衣就与前面邻居混成一人。新项目自行设稳定映射，不硬套这些名字。
 
