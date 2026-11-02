@@ -10,21 +10,22 @@ Reusable Codex skills for embedded AI, model engineering, and media production. 
 |---|---|
 | [`ascend-llm-training`](ascend-llm-training/) | Prepare, pack, launch, monitor, evaluate, and debug LLM training on Huawei Ascend NPUs with CANN, `torch_npu`, MindSpeed-LLM, or Megatron-LM. Includes field-tested guidance for document-isolated packing, HCCL jobs, `safetensors` transfer hangs, same-hardware evaluation, and activation-quantization diagnostics. |
 | [`narrated-demo-video`](narrated-demo-video/) | Build reproducible narrated demo videos from real UI recording, segmented TTS, subtitles, music, effects, and FFmpeg timelines. |
+| [`h3-native-video-production`](h3-native-video-production/) | Produce and repair H3 native audiovisual shorts: tested 4-step LoRA deployment, speaker and continuity checks, user-rejected shot case studies, source-preserving edits, subtitles, and delivery verification. |
 
 ## Install
 
 Clone the repository and copy or symlink the skill you need into your Codex skills directory:
 
 ```bash
-git clone https://github.com/umeiko/umeko_embedded_ai_skills.git
+git clone https://github.com/umeiko/umeko-skills.git
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R umeko_embedded_ai_skills/ascend-llm-training "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R umeko-skills/h3-native-video-production "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Restart or reload Codex if the new skill is not discovered immediately. You can then invoke it explicitly:
 
 ```text
-Use $ascend-llm-training to audit and launch this MindSpeed-LLM SFT run.
+Use $h3-native-video-production to deploy the tested 4-step LoRA and review these native-dialogue shots.
 ```
 
 ## Repository conventions

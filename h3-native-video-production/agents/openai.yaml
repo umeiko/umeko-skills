@@ -1,0 +1,4 @@
+interface:
+  display_name: "H3 原生视频制作与返工"
+  short_description: "H3 原生对白短片、4步 LoRA 部署、角色连续性与真实成片验收"
+  default_prompt: "使用 $h3-native-video-production 检查这些分镜及用户返工意见，选择保留原生音画的修法，并按实际证据验收。"

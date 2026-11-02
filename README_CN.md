@@ -10,21 +10,22 @@
 |---|---|
 | [`ascend-llm-training`](ascend-llm-training/) | 在华为昇腾 NPU 上准备数据、打包、启动、监控、评测和排查 LLM 训练。适用于 CANN、`torch_npu`、MindSpeed-LLM 与 Megatron-LM，包含文档隔离打包、HCCL 多卡任务、`safetensors` 传输卡死、同机评测和激活量化诊断等实战经验。 |
 | [`narrated-demo-video`](narrated-demo-video/) | 用真实界面录制、分段 TTS、字幕、音乐、特效和 FFmpeg 时间线制作可复现的讲解视频。 |
+| [`h3-native-video-production`](h3-native-video-production/) | H3 原生音画短片制作与返工：当前4步 LoRA 快速部署、说话者/角色连续性、用户拒收案例、保原音选片、字幕及正式交付验收。 |
 
 ## 安装
 
 克隆仓库，把需要的 skill 复制或软链接到 Codex skills 目录：
 
 ```bash
-git clone https://github.com/umeiko/umeko_embedded_ai_skills.git
+git clone https://github.com/umeiko/umeko-skills.git
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R umeko_embedded_ai_skills/ascend-llm-training "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R umeko-skills/h3-native-video-production "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 如果 Codex 没有立即发现新 skill，请重启或重新加载。之后可以显式调用：
 
 ```text
-请使用 $ascend-llm-training 审计并启动这个 MindSpeed-LLM SFT 任务。
+请使用 $h3-native-video-production 部署已验证的4步 LoRA，并检查这些原生对白分镜。
 ```
 
 ## 仓库约定
